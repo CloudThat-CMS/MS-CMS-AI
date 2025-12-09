@@ -18,8 +18,8 @@
 Write your content here. Use clear, concise language and appropriate markdown formatting.
 
 ##### Key Concepts
-- Concept 1: Definition and explanation
-- Concept 2: Definition and explanation
+- Concept1: Definition and explanation
+- Concept2: Definition and explanation
 
 ##### Examples
 ```code-language
