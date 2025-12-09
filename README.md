@@ -1,6 +1,6 @@
 # Content Management System
 
-A comprehensive, Git-based learning content management system with structured organization, automated validation, and continuous deployment.
+A comprehensive, Git-based learning content management system with  a structured organization, automated validation, and continuous deployment.
 
 ## 📋 Overview
 
