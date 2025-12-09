@@ -1,0 +1,64 @@
+{
+  "id": "module-001",
+  "title": "Module Title",
+  "description": "Module description",
+  "version": "1.0.0",
+  "status": "published",
+  "createdDate": "2025-01-01T00:00:00Z",
+  "lastModified": "2025-01-01T00:00:00Z",
+  "author": "Author Name",
+  "reviewedBy": "Reviewer Name",
+  "learningPath": "path-001",
+  "prerequisites": [
+    {
+      "moduleId": "module-prerequisite-001",
+      "title": "Prerequisite Module Title"
+    }
+  ],
+  "learningOutcomes": [
+    {
+      "id": "lo-001",
+      "statement": "By the end of this module, students will be able to..."
+    },
+    {
+      "id": "lo-002",
+      "statement": "By the end of this module, students will be able to..."
+    }
+  ],
+  "estimatedHours": 2,
+  "units": [
+    {
+      "id": "unit-001",
+      "title": "Unit 1: Introduction",
+      "sequence": 1,
+      "topics": [
+        {
+          "id": "topic-001",
+          "title": "Topic 1.1",
+          "sequence": 1,
+          "contentFile": "units/unit-001/topic-001.md"
+        }
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "assessment-001",
+      "type": "quiz",
+      "title": "Module Quiz",
+      "passingScore": 70,
+      "questions": 10
+    }
+  ],
+  "resources": [
+    {
+      "id": "resource-001",
+      "type": "external-link",
+      "title": "Additional Reading",
+      "url": "https://example.com"
+    }
+  ],
+  "tags": ["topic-tag-1", "topic-tag-2"],
+  "difficulty": "beginner",
+  "relatedModules": ["module-002", "module-003"]
+}

@@ -1,0 +1,22 @@
+{
+  "extends": "markdownlint:recommended",
+  "rules": {
+    "line-length": {
+      "line_length": 120,
+      "code_blocks": false,
+      "code_fence": false
+    },
+    "no-hard-tabs": true,
+    "blanks-around-headings": true,
+    "blanks-around-lists": true,
+    "no-multiple-blanks": {
+      "maximum": 1
+    },
+    "no-missing-space-atx": true,
+    "no-trailing-punctuation": true,
+    "no-trailing-spaces": true,
+    "ordered-list-marker-space": true,
+    "single-h1": false,
+    "proper-names": false
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "path-001",
+  "title": "Complete Web Development Bootcamp",
+  "description": "A comprehensive learning path to master modern web development from fundamentals to advanced techniques, covering frontend, backend, and full-stack development.",
+  "version": "1.0.0",
+  "status": "published",
+  "createdDate": "2025-01-01T00:00:00Z",
+  "lastModified": "2025-01-15T10:30:00Z",
+  "author": "Content Team",
+  "targetAudience": "Beginners to Intermediate Developers",
+  "estimatedHours": 40,
+  "difficultyLevel": "beginner",
+  "modules": [
+    {
+      "id": "module-001",
+      "title": "Web Development Fundamentals",
+      "description": "Master HTML, CSS, and JavaScript basics",
+      "sequence": 1,
+      "required": true,
+      "estimatedHours": 8
+    },
+    {
+      "id": "module-002",
+      "title": "Responsive Web Design",
+      "description": "Create designs that work on all devices",
+      "sequence": 2,
+      "required": true,
+      "estimatedHours": 6
+    },
+    {
+      "id": "module-003",
+      "title": "JavaScript Advanced Concepts",
+      "description": "Master closures, async programming, and modern ES6+",
+      "sequence": 3,
+      "required": true,
+      "estimatedHours": 8
+    },
+    {
+      "id": "module-004",
+      "title": "Frontend Frameworks",
+      "description": "Learn React, Vue, or Angular",
+      "sequence": 4,
+      "required": false,
+      "estimatedHours": 10
+    },
+    {
+      "id": "module-005",
+      "title": "Backend Development Basics",
+      "description": "Introduction to Node.js and databases",
+      "sequence": 5,
+      "required": false,
+      "estimatedHours": 8
+    }
+  ],
+  "prerequisites": [],
+  "outcomes": [
+    "Master HTML, CSS, and JavaScript fundamentals",
+    "Create responsive and accessible web pages",
+    "Implement interactive web applications",
+    "Understand and apply modern web development practices",
+    "Deploy and maintain production web applications",
+    "Work with popular frontend frameworks",
+    "Build basic backend services"
+  ],
+  "capstone": {
+    "id": "capstone-001",
+    "title": "Full-Stack Web Application Project",
+    "description": "Design and build a complete web application from frontend UI to backend API, demonstrating mastery of all concepts learned throughout the bootcamp",
+    "type": "project",
+    "estimatedHours": 20,
+    "requirements": [
+      "Frontend: Responsive, interactive UI using modern techniques",
+      "Backend: RESTful API with proper authentication",
+      "Database: Persistent data storage and retrieval",
+      "Deployment: Live application accessible via URL",
+      "Documentation: README and code comments",
+      "Testing: Basic unit and integration tests"
+    ]
+  },
+  "tags": ["web-development", "bootcamp", "complete-course", "frontend", "backend", "fullstack"],
+  "resources": [
+    {
+      "id": "resource-001",
+      "type": "community",
+      "title": "Web Development Community Forum",
+      "url": "https://community.example.com"
+    },
+    {
+      "id": "resource-002",
+      "type": "tool",
+      "title": "VS Code IDE",
+      "description": "Recommended code editor",
+      "url": "https://code.visualstudio.com"
+    }
+  ]
+}

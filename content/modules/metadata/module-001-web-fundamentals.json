@@ -1,0 +1,191 @@
+{
+  "id": "module-001",
+  "title": "Web Development Fundamentals",
+  "description": "Master the foundations of web development including HTML structure, CSS styling, and JavaScript interactivity. This comprehensive module covers essential concepts for building modern web applications.",
+  "version": "1.0.0",
+  "status": "published",
+  "createdDate": "2025-01-01T00:00:00Z",
+  "lastModified": "2025-01-15T10:30:00Z",
+  "author": "Content Team",
+  "reviewedBy": "Senior Instructor",
+  "learningPath": "path-001",
+  "prerequisites": [],
+  "learningOutcomes": [
+    {
+      "id": "lo-001",
+      "statement": "Understand the structure and semantic meaning of HTML elements and create valid, accessible markup"
+    },
+    {
+      "id": "lo-002",
+      "statement": "Apply CSS styling techniques to create visually appealing and responsive layouts"
+    },
+    {
+      "id": "lo-003",
+      "statement": "Implement interactive features using vanilla JavaScript and DOM manipulation"
+    },
+    {
+      "id": "lo-004",
+      "statement": "Debug web applications and optimize for performance and accessibility"
+    }
+  ],
+  "estimatedHours": 8,
+  "units": [
+    {
+      "id": "unit-001",
+      "title": "HTML Fundamentals",
+      "sequence": 1,
+      "topics": [
+        {
+          "id": "topic-001",
+          "title": "Introduction to HTML",
+          "sequence": 1,
+          "contentFile": "units/unit-001/topic-001.md"
+        },
+        {
+          "id": "topic-002",
+          "title": "HTML Elements and Structure",
+          "sequence": 2,
+          "contentFile": "units/unit-001/topic-002.md"
+        },
+        {
+          "id": "topic-003",
+          "title": "Forms and Input Elements",
+          "sequence": 3,
+          "contentFile": "units/unit-001/topic-003.md"
+        }
+      ]
+    },
+    {
+      "id": "unit-002",
+      "title": "CSS Styling and Layouts",
+      "sequence": 2,
+      "topics": [
+        {
+          "id": "topic-001",
+          "title": "CSS Selectors and Properties",
+          "sequence": 1,
+          "contentFile": "units/unit-002/topic-001.md"
+        },
+        {
+          "id": "topic-002",
+          "title": "CSS Box Model and Layouts",
+          "sequence": 2,
+          "contentFile": "units/unit-002/topic-002.md"
+        },
+        {
+          "id": "topic-003",
+          "title": "Responsive Design with Media Queries",
+          "sequence": 3,
+          "contentFile": "units/unit-002/topic-003.md"
+        }
+      ]
+    },
+    {
+      "id": "unit-003",
+      "title": "JavaScript Basics",
+      "sequence": 3,
+      "topics": [
+        {
+          "id": "topic-001",
+          "title": "JavaScript Fundamentals and Syntax",
+          "sequence": 1,
+          "contentFile": "units/unit-003/topic-001.md"
+        },
+        {
+          "id": "topic-002",
+          "title": "DOM Manipulation and Events",
+          "sequence": 2,
+          "contentFile": "units/unit-003/topic-002.md"
+        },
+        {
+          "id": "topic-003",
+          "title": "Debugging and Best Practices",
+          "sequence": 3,
+          "contentFile": "units/unit-003/topic-003.md"
+        }
+      ]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "assessment-001",
+      "type": "quiz",
+      "title": "HTML Fundamentals Quiz",
+      "description": "Test your understanding of HTML structure and semantic elements",
+      "passingScore": 75,
+      "questions": 10,
+      "relatedUnit": "unit-001"
+    },
+    {
+      "id": "assessment-002",
+      "type": "quiz",
+      "title": "CSS Styling Quiz",
+      "description": "Verify your knowledge of CSS selectors, properties, and layouts",
+      "passingScore": 75,
+      "questions": 10,
+      "relatedUnit": "unit-002"
+    },
+    {
+      "id": "assessment-003",
+      "type": "quiz",
+      "title": "JavaScript Basics Quiz",
+      "description": "Assess your understanding of JavaScript fundamentals",
+      "passingScore": 75,
+      "questions": 10,
+      "relatedUnit": "unit-003"
+    },
+    {
+      "id": "assessment-004",
+      "type": "project",
+      "title": "Personal Portfolio Website",
+      "description": "Build a responsive personal portfolio website using HTML, CSS, and JavaScript",
+      "requirements": [
+        "Create a responsive multi-page website",
+        "Use semantic HTML structure",
+        "Implement responsive design with CSS Grid/Flexbox",
+        "Add interactive features with JavaScript",
+        "Ensure accessibility standards (WCAG 2.1)"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "resource-001",
+      "type": "external-link",
+      "title": "MDN Web Docs - HTML",
+      "description": "Comprehensive HTML documentation",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    {
+      "id": "resource-002",
+      "type": "external-link",
+      "title": "MDN Web Docs - CSS",
+      "description": "Complete CSS reference and tutorials",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+      "id": "resource-003",
+      "type": "external-link",
+      "title": "MDN Web Docs - JavaScript",
+      "description": "JavaScript guide and API reference",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+      "id": "resource-004",
+      "type": "external-link",
+      "title": "CSS-Tricks",
+      "description": "Daily articles about CSS and web design",
+      "url": "https://css-tricks.com"
+    },
+    {
+      "id": "resource-005",
+      "type": "download",
+      "title": "Web Dev Quick Reference",
+      "description": "HTML/CSS/JavaScript cheat sheet",
+      "url": "assets/web-dev-reference.pdf"
+    }
+  ],
+  "tags": ["web-development", "html", "css", "javascript", "beginner", "frontend"],
+  "difficulty": "beginner",
+  "relatedModules": ["module-002", "module-003"]
+}

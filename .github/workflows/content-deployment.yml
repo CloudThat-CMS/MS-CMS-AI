@@ -1,0 +1,89 @@
+name: Content Deployment
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'content/**'
+
+jobs:
+  staging-deployment:
+    runs-on: ubuntu-latest
+    name: Deploy to Staging
+    environment: staging
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Build content artifacts
+        run: python scripts/deployment/build-content.py
+
+      - name: Deploy to staging CDN
+        env:
+          STAGING_DEPLOY_KEY: ${{ secrets.STAGING_DEPLOY_KEY }}
+          STAGING_ENDPOINT: ${{ secrets.STAGING_ENDPOINT }}
+        run: python scripts/deployment/deploy-to-cdn.py --environment staging
+
+      - name: Run smoke tests
+        run: python scripts/validation/smoke-tests.py --environment staging
+
+      - name: Notify deployment
+        if: always()
+        run: echo "Staging deployment completed"
+
+  production-deployment:
+    runs-on: ubuntu-latest
+    name: Deploy to Production
+    environment: production
+    needs: staging-deployment
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Build content artifacts
+        run: python scripts/deployment/build-content.py
+
+      - name: Deploy to production CDN
+        env:
+          PROD_DEPLOY_KEY: ${{ secrets.PROD_DEPLOY_KEY }}
+          PROD_ENDPOINT: ${{ secrets.PROD_ENDPOINT }}
+        run: python scripts/deployment/deploy-to-cdn.py --environment production
+
+      - name: Run production smoke tests
+        run: python scripts/validation/smoke-tests.py --environment production
+
+      - name: Invalidate CDN cache
+        env:
+          CDN_DISTRIBUTION_ID: ${{ secrets.CDN_DISTRIBUTION_ID }}
+        run: python scripts/deployment/invalidate-cdn.py
+
+      - name: Create release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Content Release ${{ github.run_number }}
+          body: Production deployment completed
+          draft: false
+          prerelease: false
+
+  notify:
+    runs-on: ubuntu-latest
+    name: Notify Stakeholders
+    needs: [staging-deployment, production-deployment]
+    if: always()
+
+    steps:
+      - name: Send notification
+        run: echo "Deployment notifications sent to stakeholders"

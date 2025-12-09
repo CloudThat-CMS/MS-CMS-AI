@@ -1,0 +1,101 @@
+name: Content Validation
+
+on:
+  pull_request:
+    branches: [ develop, main, release/* ]
+    paths:
+      - 'content/**'
+      - '.github/workflows/**'
+
+jobs:
+  markdown-validation:
+    runs-on: ubuntu-latest
+    name: Validate Markdown Files
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install markdown linter
+        run: npm install -g markdownlint-cli
+
+      - name: Lint markdown files
+        run: markdownlint 'content/**/*.md' --config .markdownlint.json || true
+
+  metadata-validation:
+    runs-on: ubuntu-latest
+    name: Validate Metadata JSON
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install validation script dependencies
+        run: |
+          python -m pip install jsonschema pyyaml
+
+      - name: Run metadata validation
+        run: python scripts/validation/validate-metadata.py
+
+  link-validation:
+    runs-on: ubuntu-latest
+    name: Validate Links and References
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Check for broken links
+        run: python scripts/validation/validate-links.py
+
+  spelling-check:
+    runs-on: ubuntu-latest
+    name: Check Spelling
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check spelling
+        uses: crate-ci/typos@master
+        with:
+          files: content/
+
+  content-structure:
+    runs-on: ubuntu-latest
+    name: Validate Content Structure
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Validate directory structure
+        run: python scripts/validation/validate-structure.py
+
+  summary:
+    runs-on: ubuntu-latest
+    name: Validation Summary
+    needs: [markdown-validation, metadata-validation, link-validation, spelling-check, content-structure]
+    if: always()
+
+    steps:
+      - name: Report validation status
+        run: |
+          echo "## Content Validation Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ All validations completed" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,54 @@
+{
+  "id": "path-001",
+  "title": "Learning Path Title",
+  "description": "Comprehensive learning path description",
+  "version": "1.0.0",
+  "status": "published",
+  "createdDate": "2025-01-01T00:00:00Z",
+  "lastModified": "2025-01-01T00:00:00Z",
+  "author": "Author Name",
+  "targetAudience": "Intermediate developers",
+  "estimatedHours": 20,
+  "difficultyLevel": "intermediate",
+  "modules": [
+    {
+      "id": "module-001",
+      "title": "Module 1: Foundations",
+      "sequence": 1,
+      "required": true,
+      "estimatedHours": 4
+    },
+    {
+      "id": "module-002",
+      "title": "Module 2: Core Concepts",
+      "sequence": 2,
+      "required": true,
+      "estimatedHours": 6
+    },
+    {
+      "id": "module-003",
+      "title": "Module 3: Advanced Topics",
+      "sequence": 3,
+      "required": false,
+      "estimatedHours": 10
+    }
+  ],
+  "prerequisites": [
+    {
+      "pathId": "path-prerequisite",
+      "title": "Prerequisite Learning Path"
+    }
+  ],
+  "outcomes": [
+    "Master core concepts and principles",
+    "Apply knowledge in practical scenarios",
+    "Understand advanced implementation patterns"
+  ],
+  "tags": ["path-tag-1", "path-tag-2"],
+  "capstone": {
+    "id": "capstone-001",
+    "title": "Capstone Project",
+    "description": "Final project to demonstrate mastery",
+    "type": "project"
+  }
+}
