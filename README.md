@@ -36,8 +36,8 @@ content/
 │   ├── metadata/                # Module metadata files (JSON)
 │   └── units/                   # Unit content files (Markdown)
 └── assets/
-    ├── images/                  # Image assets
-    └── videos/                  # Video assets
+    ├── images/                  # Upload images,static assest and videos to blob storage (Script)
+    └── videos/                  
 
 .github/
 └── workflows/                   # GitHub Actions workflows
