@@ -6,14 +6,14 @@ on:
 
 jobs:
   staging:
-    name: Dummy Staging
+    name: Staging
     runs-on: ubuntu-latest
     steps:
       - name: Echo staging step
         run: echo "Staging step (dummy)"
 
   production:
-    name: Dummy Production
+    name:  Production
     runs-on: ubuntu-latest
     needs: staging
     environment:
