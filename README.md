@@ -55,7 +55,39 @@ scripts/
 docs/                            # Documentation
 tests/                           # Automated tests
 ```
+## 🔄 Content Update Workflow
 
+Follow this workflow to contribute changes:
+
+```
+1. Create Feature Branch
+   └─ git checkout -b feature/module-advanced-typescript
+
+2. Author Content
+   └─ Write/update markdown files and metadata
+
+3. Commit Changes
+   └─ git commit -m "feat(modules): add advanced TypeScript module"
+
+4. Push & Create Pull Request
+   └─ Triggers: Content Validation
+
+5. Review & Approval
+   └─ Minimum 1 approval required
+
+6. Merge to develop
+   └─ Merge PR (squash commits)
+   └─ Triggers: Automated tests
+
+7. Merge to main (Release)
+   └─ Merge develop → main
+   └─ Triggers: Staging deployment
+
+8. Production Deployment
+   └─ Merge main → Triggers: Production deployment
+   └─ CDN cache invalidation
+   └─ Release creation
+```
 ## 🚀 Quick Start
 
 ### 1. Create a Learning Module
@@ -108,39 +140,7 @@ Define:
 - Learning outcomes
 - Capstone project (optional)
 
-## 🔄 Content Update Workflow
 
-Follow this workflow to contribute changes:
-
-```
-1. Create Feature Branch
-   └─ git checkout -b feature/module-advanced-typescript
-
-2. Author Content
-   └─ Write/update markdown files and metadata
-
-3. Commit Changes
-   └─ git commit -m "feat(modules): add advanced TypeScript module"
-
-4. Push & Create Pull Request
-   └─ Triggers: Content Validation
-
-5. Review & Approval
-   └─ Minimum 1 approval required
-
-6. Merge to develop
-   └─ Merge PR (squash commits)
-   └─ Triggers: Automated tests
-
-7. Merge to main (Release)
-   └─ Merge develop → main
-   └─ Triggers: Staging deployment
-
-8. Production Deployment
-   └─ Merge main → Triggers: Production deployment
-   └─ CDN cache invalidation
-   └─ Release creation
-```
 
 ## 🌿 Git Workflow
 
