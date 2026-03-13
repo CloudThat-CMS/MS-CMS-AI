@@ -41,7 +41,24 @@ const example = "Sample code block";
 - Solve practical problems
 
 #### Content
-Continue your content with detailed explanations.
+## Microsoft Foundry
+
+**Microsoft Foundry** is a platform for AI development on **Microsoft Azure**. While it is possible to provision individual Foundry Tools resources and build applications that consume them without using the platform, the **project organization, resource management, and AI development capabilities** provided by Microsoft Foundry make it the recommended approach for building anything beyond the most basic AI solutions.
+
+Microsoft Foundry provides the following components:
+
+### 1. Microsoft Foundry Portal
+A **web-based visual interface** that allows developers and teams to:
+- Create and manage AI projects
+- Organize resources
+- Build and manage AI solutions
+- Monitor and manage development workflows
+
+### 2. Microsoft Foundry SDK
+A **software development kit (SDK)** that enables developers to:
+- Build AI solutions programmatically
+- Automate workflows
+- Integrate AI capabilities into applications using code
 
 ##### Practical Applications
 1. Use case 1
