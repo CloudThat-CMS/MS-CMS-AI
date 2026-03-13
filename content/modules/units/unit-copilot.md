@@ -102,12 +102,12 @@ Brief summary of the unit content and key takeaways.
 ## Resources
 
 ### Required Reading
-- [Resource 1](link-to-resource)
-- [Resource 2](link-to-resource)
+- Resource 1
+- Resource 2
 
 ### Additional References
-- [Reference 1](link-to-reference)
-- [Reference 2](link-to-reference)
+- Reference 1
+- Reference 2
 
 ## Assessment
 

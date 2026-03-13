@@ -77,13 +77,3 @@ Brief summary of the unit content and key takeaways.
 3. Question 3?
 4. Question 4?
 5. Question 5?
-
-
-
-### Hands-on Exercise
-Provide practical tasks for learners to complete.
-
----
-
-*Last Updated: 2025-01-01*
-*Version: 1.0.0*
