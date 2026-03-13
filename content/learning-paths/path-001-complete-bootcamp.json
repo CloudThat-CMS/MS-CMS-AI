@@ -13,7 +13,7 @@
   "modules": [
     {
       "id": "module-001",
-      "title": "Web Development Fundamentals",
+      "title": "Module Title",
       "description": "Master HTML, CSS, and JavaScript basics",
       "sequence": 1,
       "required": true,
