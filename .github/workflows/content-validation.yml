@@ -2,7 +2,7 @@ name: Content Validation
 
 on:
   pull_request:
-    branches: [ develop, main, release/* ]
+    branches: [ Develop, main, release/* ]
     paths:
       - 'content/**'
       - '.github/workflows/**'
