@@ -1,0 +1,63 @@
+name: Sequential PR Review
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sequential-review:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get review information
+        id: review
+        run: |
+          echo "reviewer=${{ github.event.review.user.login }}" >> $GITHUB_OUTPUT
+          echo "state=${{ github.event.review.state }}" >> $GITHUB_OUTPUT
+
+      - name: Assign Reviewer 2 after Reviewer 1 approval
+        if: steps.review.outputs.reviewer == 'reviewer1' && steps.review.outputs.state == 'approved'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              reviewers: ['reviewer2']
+            })
+
+      - name: Assign Reviewer 3 after Reviewer 2 approval
+        if: steps.review.outputs.reviewer == 'reviewer2' && steps.review.outputs.state == 'approved'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              reviewers: ['reviewer3']
+            })
+
+      - name: Assign Approver 1 after Reviewer 3 approval
+        if: steps.review.outputs.reviewer == 'reviewer3' && steps.review.outputs.state == 'approved'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              reviewers: ['approver1']
+            })
+
+      - name: Assign Approver 2 after Approver 1 approval
+        if: steps.review.outputs.reviewer == 'approver1' && steps.review.outputs.state == 'approved'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              reviewers: ['approver2']
+            })
